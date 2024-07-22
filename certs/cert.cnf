@@ -1,0 +1,26 @@
+[ req ]
+default_bits = 2048
+distinguished_name = dn
+prompt = no
+default_md = sha256
+req_extensions = req_ext
+ 
+[ dn ]
+C = FR
+ST = Region
+L = Ville
+O=Entreprise
+OU = Organisation Unite
+emailAddress = adresse@email.com
+CN = hostname.domain.fqdn
+ 
+[ req_ext ]
+subjectAltName = @alt_names
+ 
+[ alt_names ]
+DNS.0 = hostname
+DNS.1 = hostname.domain
+DNS.2 = dns-alias-1
+DNS.3 = dns-alias-1.domain
+DNS.4 = dns-alias-2
+DNS.5 = dns-alias-2.domain
